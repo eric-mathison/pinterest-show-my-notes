@@ -1,0 +1,25 @@
+{
+  "name": "Pinterest Show My Notes",
+  "description": "Show notes from Pinterest pins",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "128": "icons/128.png"
+  },
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["https://*.pinterest.com/*"]
+    }
+  ],
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab",
+    "webNavigation",
+    "offscreen"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
