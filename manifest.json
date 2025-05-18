@@ -1,7 +1,7 @@
 {
   "name": "Pinterest Show My Notes",
   "description": "Show notes from Pinterest pins",
-  "version": "1.01",
+  "version": "1.02",
   "manifest_version": 3,
   "icons": {
     "128": "icons/128.png"
