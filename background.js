@@ -23,6 +23,8 @@ async function handleMessages(message) {
 
   switch (message.type) {
     case "page-data-result":
+      // console.debug("Received page data result")
+      // console.log("Message data:", message.data)
       await handlePageDataResult(message.data)
       break
     default:
@@ -45,7 +47,10 @@ async function getNotesfromCurrentPin() {
   const pinId = url.match(/\/pin\/(\d+)/)[1]
   const htmlString = await fetch(url).then((data) => data.text())
 
-  // console.debug("Sending message to offscreen.js");
+  // console.debug("Sending message to offscreen.js")
+  // console.log("Pin ID:", pinId)
+  // console.log("HTML String:", htmlString)
+
   try {
     await chrome.runtime.sendMessage({
       type: "parse-page",
